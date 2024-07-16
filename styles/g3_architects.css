@@ -10,6 +10,23 @@
 .display-flex{
   display: flex;
 }
+/* it'll be applied to all elements inside the main */
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section{
+  margin-top: 130px;
+}
+/* title related styles */
+.section-title{
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+/* orange color */
+.orange{
+  color: #FF900E;
+}
 /* dark_02 */
 .text-gray{
   color: #424242;
@@ -36,8 +53,8 @@
 
 /* UNIVERSALLY SHARED STYLES ENDS */
 
-/* navbar & banner styling section starts */
-/* header section styling */
+/* navbar & banner part styling starts */
+/* header related styles */
 
 /* banner related styles */
 .banner-content{
@@ -58,7 +75,7 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-/* navbar section styling */
+/* navbar related styles */
 .navbar{
   justify-content: space-between;
   align-items: center;
@@ -78,10 +95,51 @@
   text-decoration: none;
   font-weight: 500;
 }
-/* responsive media query for navbar & banner section */
+/* responsive media query for navbar & banner part */
+/* for extra small devices */
 @media screen and (max-width: 576px) {
   .navbar, .nav-links{
     flex-direction: column;
   }
 }
-/* navbar & banner styling section ends */
+/* navbar & banner part styling ends */
+
+/* team, features & facts part styling */
+/* team & features section related styles */
+.teams{
+  align-items: center;
+}
+.team-img-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+}
+.our-features{
+  margin-left: 75px;
+  max-width: 535px;
+}
+#quick-list{
+  font-weight: 500;
+}
+/* responsive media query for team, features & facts part styling */
+/* for extra small devices */
+@media screen and (max-width: 576px) {
+  .teams{
+    flex-direction: column;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .our-features{
+    margin: 24px auto 0;
+  }
+}
+/* for small & medium devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams{
+    flex-direction: column;
+  }
+  .our-features{
+    margin: 24px auto 0;
+  }
+}
